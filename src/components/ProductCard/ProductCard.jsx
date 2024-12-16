@@ -10,7 +10,7 @@ export default function ProductCard({productInfo}) {
     
   return (
    <>
-   <Link to={`/products/${id}`} className='border-2 border-blue-600 p-2 col-span-3'>
+   <Link to={`/products/${id}`} className='border-2 border-blue-600 p-2 sm:col-span-12 md:col-span-5 lg:col-span-4 col-span-3 '>
     <img src={images && images.length > 0 ? images[0] : 'https://via.placeholder.com/300'} alt="productImage" />
     <h2 className='text-blue-900 font-semibold'>{title}</h2>
     <p>price: ${price}</p>

@@ -34,7 +34,7 @@ const formik = useFormik({
   return (
     <>
     <div className="container pt-10">
-        <form  className=' md:w-3/4 lg:w-1/2 mx-auto flex flex-col items-center justify-center mt-20' onSubmit={formik.handleSubmit}>
+        <form  className='sm:w-full md:w-3/4 lg:w-1/2 mx-auto flex flex-col items-center justify-center mt-20' onSubmit={formik.handleSubmit}>
             <input
             
             className='border-2 border-gray-500 rounded-md py-1 px-2 mb-2 w-full  '

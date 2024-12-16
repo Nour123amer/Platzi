@@ -5,7 +5,7 @@ export default function CategoryCard({ categoryInfo }) {
   let { id, name, image, creationAt, updatedAt } = categoryInfo;
   return (
     <>
-      <div  className='border-2 border-blue-600 p-2 col-span-3'>
+      <div  className='border-2 border-blue-600 p-2 sm:col-span-12 md:col-span-5 lg:col-span-4 col-span-3 '>
         <img src={image ? image :'https://i.imgur.com/Qphac99.jpeg'} alt="" />
         <h3 className='text-blue-900 font-semibold'>{name}</h3>
         <p>{creationAt}</p>

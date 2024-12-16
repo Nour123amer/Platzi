@@ -85,9 +85,9 @@ export default function Navbar() {
               >Login</NavLink></li>
 
         <li>
-           <Link to='/cart'>
-      <i  className="fa-solid fa-cart-shopping text-2xl text-white position-relative"></i>
-      <span className='cartItems position-absolute top-2 right-6 text-center'>{number}</span>
+           <Link to='/cart ' className='relative'>
+      <i  className="fa-solid fa-cart-shopping text-2xl text-white "></i>
+      <span className='cartItems position-absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 text-center'>{number}</span>
       </Link >
         </li>
        </ul>
