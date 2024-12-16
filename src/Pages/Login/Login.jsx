@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 
 export default function Login() {
   let navigate = useNavigate();
+  let x;
     let validationSchema = Yup.object({
         email:Yup.string().required('email is required').email('email is not valid'),
         password:Yup.string().required('password is required').matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,'password is not valid'),
@@ -17,10 +18,19 @@ export default function Login() {
          password:'',
        
        },
-       validationSchema
+       validationSchema,
+       onSubmit:(values) =>{
+         x= toast.success("user signed up successfully...");
+        setTimeout(()=>{
+          navigate('/');
+      },3000)
+     
+        toast.dismiss(x);
+      }
+      
      })
-
-     toast.success("user logged in successfully...");
+ 
+    
   return (
     <div>
        <div className="container pt-10">
@@ -54,7 +64,7 @@ export default function Login() {
                ):
 
                ('')}
-            <button onClick={()=>{navigate('/')}}  className='bg-green-600 text-white rounded-lg px-2 py-1 font-semibold w-1/4 '>Login</button>
+            <button onClick={()=>{navigate('/')}}  className='bg-blue-900 text-white rounded-lg px-2 py-1 font-semibold w-1/4 '>Login</button>
         </form>
     </div>
     </div>

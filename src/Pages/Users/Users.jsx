@@ -46,12 +46,14 @@ export default function Users() {
         : (<Loading />) }
 
        
-        <div className='grid grid-cols-12 gap-4 p-2'>
-          {filteredUser.map((user) => (
-            <UserCard userInfo={user} key={user.id} />
-          )
-          )}
-        </div>
+    
+       <div className='grid grid-cols-12 gap-4 p-2'>
+       {filteredUser.map((user) => (
+         <UserCard userInfo={user} key={user.id} />
+       )
+       )}
+     </div> 
+
         
        
        

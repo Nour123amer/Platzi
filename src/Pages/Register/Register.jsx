@@ -16,8 +16,8 @@ export default function Register() {
    password:Yup.string().required('password is required').matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,'password is not valid'),
    repassword:Yup.string().required('repassword is required').oneOf([Yup.ref("password")],'password and repassword should be the same'),
   });
-  toast.success("user signed up successfully...");
-   
+  
+  let x;
 
 const formik = useFormik({
   initialValues:{
@@ -27,8 +27,19 @@ const formik = useFormik({
     password:'',
     repassword:'',
   },
-  validationSchema
+  validationSchema,
+  onSubmit:(values) =>{
+     x= toast.success("user signed up successfully...");
+     setTimeout(()=>{
+    navigate('/login');
+  },3000)
+    
+    toast.dismiss(x);
+  }
+
 })
+
+toast.dismiss(x);
 
 
   return (
@@ -107,7 +118,7 @@ const formik = useFormik({
                ):
 
                ('')}
-            <button onClick={()=>{navigate('/login')}} className='bg-green-600 text-white rounded-lg px-2 py-1 font-semibold w-1/4 '>Signup</button>
+            <button  className='bg-blue-900 text-white rounded-lg px-2 py-1 font-semibold w-1/4 '>Signup</button>
         </form>
     </div>
     </>

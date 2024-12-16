@@ -34,7 +34,7 @@ export default function Home() {
   //  toast.dismiss(id);
     async function getProductsLessThan100() {
       try {
-        let { data } = await axios('https://api.escuelajs.co/api/v1/products/?price_min=20&price_max=40');
+        let { data } = await axios('https://api.escuelajs.co/api/v1/products/?price_min=20&price_max=110');
         console.log(data);
 
         setFilteredProducts(data)
@@ -51,7 +51,7 @@ export default function Home() {
 
     async function getProductsLessThan70() {
       try {
-        let { data } = await axios('https://api.escuelajs.co/api/v1/products/?price_min=40&price_max=70');
+        let { data } = await axios('https://api.escuelajs.co/api/v1/products/?price_min=110&price_max=170');
         console.log(data);
 
         setFilteredProducts(data)
